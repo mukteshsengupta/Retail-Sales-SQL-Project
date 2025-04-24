@@ -5,7 +5,7 @@
 
 This project focuses on extracting insights from a retail sales dataset using SQL. By leveraging SQL queries, the project aims to perform in-depth analysis of key metrics such as total revenue, sales trends, product performance, and customer behavior. The dataset includes detailed transactional data which is cleaned and queried to generate meaningful business insights.
 
-
+---
 🗃️ **Database Objective**
 
 1. Set up a retail sales database: create and populate a retail sales database with the provided sales data
