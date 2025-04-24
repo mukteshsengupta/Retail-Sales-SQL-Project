@@ -36,6 +36,10 @@ customer_id int,
     total_sale float
     );
 
+
+
+
+
 2. 🧹Data Cleaning:
 
 select  * from reteil_sales
@@ -62,6 +66,9 @@ total_sale is null;
 
 
 
+
+
+
 3.🔍 Data Exploration:
 
 -- how many sales we have?
@@ -75,6 +82,9 @@ from reteil_sales;
 -- types of categories--
 select distinct category
 from reteil_sales;
+
+
+
 
 
 4.📊  Business Analysis & Findings:
@@ -106,6 +116,10 @@ where category = 'Beauty';
 select transactions_id
 from reteil_sales
 where total_sale > 1000;
+
+
+
+
 
 
 
@@ -147,3 +161,9 @@ WHERE avg_monthly_sale = (
     WHERE year = m.year
 )
 ORDER BY year;
+
+
+SELECT 
+    SUM(CASE WHEN product IS NULL THEN 1 ELSE 0 END) AS null_products,
+    SUM(CASE WHEN total_sales IS NULL THEN 1 ELSE 0 END) AS null_sales
+FROM sales_data;
