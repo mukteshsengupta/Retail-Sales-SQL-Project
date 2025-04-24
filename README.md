@@ -46,7 +46,6 @@ customer_id int,
 2. 🧹**Data Cleaning:**
 
 '''sql
-
 select  * from reteil_sales
 where 
 sale_date is null
@@ -71,18 +70,13 @@ total_sale is null;
 '''
 
 
-
-
-
 3.🔍 **Data Exploration:**
 
 -- **how many sales we have?**
-
 '''sql
 select count(total_sale)
 from reteil_sales;
 '''
-
 -- **how many customers we have?**
 '''sql
 select count(distinct customer_id)
@@ -97,8 +91,6 @@ from reteil_sales;
 '''
 
 
-
-
 4.📊  **Business Analysis & Findings**:
 
 -- Q1 **Retrive all columns for sales made on 2022-11-05**
@@ -111,7 +103,6 @@ where sale_date = '2022-11-05';
 
 -- Q2 **caluculate the total sales(total_sale) for each category.**
 
-
 '''sql
 select  category, sum(total_sale)
 from  reteil_sales
@@ -121,7 +112,6 @@ group by category;
 -- Q3 **find the average age of customers who purchased items from the beauty category**
 
 '''sql
-
 select 
 round (avg(age),2) as avg_age
 from reteil_sales
@@ -144,8 +134,6 @@ where total_sale > 1000;
 -- Q5 **find the total numbar of transactions (id) made by each gender in each catrgory**
 
 '''sql
-
-
 select 
 category,
 gender,
@@ -159,8 +147,6 @@ order by category
 -- Q6 calculate the avg sale for each month, find out the best selling monh in each year.
 
 '''sql
-
-
 SELECT 
     YEAR(sale_date) AS year,
     MONTH(sale_date) AS month,
@@ -186,6 +172,5 @@ WHERE avg_monthly_sale = (
     WHERE year = m.year
 )
 ORDER BY year;
-
 '''
 
